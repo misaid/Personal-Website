@@ -1,7 +1,7 @@
 import random
 
 ideas = ['links website', 'resume website (2049 inspo)',
-         'weather notifications website', 'pomodoro type website']
+         'weather notifications website', 'pomodoro type website','typeracer clone']
 dic = {}
 
 for i in range(100):
