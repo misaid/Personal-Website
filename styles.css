@@ -7,12 +7,26 @@ body {
   margin: 0;
   background-color: rgb(20, 20, 20);
 }
+
+.nav-bar {
+  position:fixed;
+  top:0;
+  width:100%;
+  background-color:rgb(15,15,15);
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius:5%;
+  overflow: hidden;
+}
+.nav-bar a {
+  float: right;
+  padding: 0px 10px;
+}
 .main-grid {
   grid-template-columns: 70% 30%;
 }
 
 .header {
-  padding-top: 30px;
+  padding-top: 150px;
   text-align: center;
 }
 
@@ -22,11 +36,10 @@ body {
 }
 
 #social-icons {
-  display: flex;
-  width: 50%;
+  display:inline-block;
+  width:100%;
   font-size: 30px;
-  padding-top: 30px;
-  align-items: center;
+  align-items: right;
 
 }
 
