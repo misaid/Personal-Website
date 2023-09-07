@@ -26,7 +26,7 @@ body {
 }
 
 .header {
-  padding-top: 150px;
+  padding: 10vh 10vh 0vh;
   text-align: center;
 }
 
@@ -35,6 +35,10 @@ body {
   border-bottom-left-radius: 10px;
 }
 
+.about-text {
+  text-align: center;
+  padding: 0 15vh 0;
+}
 #social-icons {
   display:inline-block;
   width:100%;
