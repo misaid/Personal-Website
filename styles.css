@@ -50,11 +50,14 @@ body {
 #card-container {
   align-items: center;
   background-color: var(--bg-color);
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right:auto;
   display: flex;
   height: 420px;
   justify-content: center;
-  margin-top: 20px;
-  overflow: hidden;
+  margin-top: auto;
+  overflow: scroll;
   padding: 0px;
 }
 
