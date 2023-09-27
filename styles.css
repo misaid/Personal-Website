@@ -139,20 +139,42 @@ body {
 }
 
 .card-container {
-  margin:auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
 
 .card {
+  height: 420px;
+  margin: 20px;
+  box-shadow: 2px 2px 15px rgb(112, 111, 111);
+  padding: 0;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  height: 420px;
-  flex-direction: row;
+
   position: relative;
   width: 300px;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-container h1 {
+  font-size: 16px;
+}
+
+.card-container p {
+  font-size: 12px;
 }
 
 
@@ -184,6 +206,7 @@ a {
 #spacer {
   margin-bottom: 80px;
 }
+
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
 @media(max-width: 1000px) {
@@ -211,7 +234,7 @@ a {
 
 @media(max-width: 320px) {
   .card {
-    margin:10% 0;
+    margin: 10% 0;
     width: 80%;
   }
 }
