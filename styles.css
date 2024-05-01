@@ -295,7 +295,34 @@ a {
 .card-link{
   z-index: 3;
 }
+#get-in-touch {
+  font-family: "Rubik", sans-serif;
+  align-items: center;
+  display: flex;
+  margin-left:20px;
+}
+#contact-form label {
+  color: white;
+}
+#contact-form{
+  margin: 0px 15% 80px;
+}
+input[type="text"], textarea {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background-color : var(--bg-color); 
 
+}
+#name{
+  width: 20%;
+  margin-bottom: 5px;
+  color:white;
+}
+#message {
+  height: 100px;
+  width: 100%;
+  color:white;
+}
 #spacer {
   margin-bottom: 80px;
 }
