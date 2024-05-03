@@ -131,13 +131,18 @@
 
         </div>
     </div id="get-in-touch">
-        <h3 class="small-header">Get in touch</h4>
+        <h3 class="small-header">Get in touch</h3>
         <div id="contact-form">
-            <form id="email-form">
+            <form id="email-form" action="sendmail.php" method="post">
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
+                <input type="text" id="name" name="name" placeholder="John Doe" required><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="user@msaid.dev" required><br>
+
                 <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br>
+                <textarea id="message" name="message" placeholder="Hello!" required></textarea><br>
+
                 <input type="submit" value="Submit">
             </form>
         </div>
