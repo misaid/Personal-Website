@@ -19,7 +19,7 @@ try {
         $mail->Host = 'smtp.ionos.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'server@msaid.dev';
-        $mail->Password = '###';
+        $mail->Password = 's2k3e4-1';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 

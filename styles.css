@@ -148,9 +148,9 @@ body {
   height: 420px;
   justify-content: center;
   margin-top: auto;
-  margin-bottom:40px;
+  margin-bottom: 40px;
   /*fix*/
-  overflow:hidden;
+  overflow: hidden;
   padding: 10px;
 }
 
@@ -221,8 +221,8 @@ body {
 }
 
 .card-content p {
-  margin:20px;
-  font-size:1vw;
+  margin: 20px;
+  font-size: 1vw;
 
 }
 
@@ -292,40 +292,58 @@ a {
   font-size: 0.85em;
   margin-top: 8px;
 }
-.card-link{
+
+.card-link {
   z-index: 3;
 }
+
 #get-in-touch {
   font-family: "Rubik", sans-serif;
   align-items: center;
   display: flex;
-  margin-left:20px;
+  margin-left: 20px;
 }
+
 #contact-form label {
   color: white;
 }
-#contact-form{
+
+#contact-form {
   margin: 0px 15% 80px;
 }
-input[type="text"], textarea {
+
+input[type="text"],
+textarea {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  background-color : var(--bg-color); 
+  background-color: var(--bg-color);
 
 }
-#name{
+
+input[type="email"],
+textarea {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+
+}
+
+#name {
   width: 20%;
   margin-bottom: 5px;
-  color:white;
+  color: white;
 }
+
 #message {
   height: 100px;
   width: 100%;
-  color:white;
+  color: white;
 }
+
 #spacer {
   margin-bottom: 80px;
 }
+
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
 @media(max-width: 1000px) {
