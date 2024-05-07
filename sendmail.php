@@ -1,6 +1,12 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 $mail = new PHPMailer(true);
 
 try {
@@ -16,23 +22,26 @@ try {
 
         //Server settings
         $mail->isSMTP();
-        $mail->Host = 'smtp.ionos.com';
+        $mail->Host = $_ENV['SMTP_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Username = 'server@msaid.dev';
-        $mail->Password = 's2k3e4-1';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->Username = $_ENV['SMTP_USERNAME'];
+        $mail->Password = $_ENV['SMTP_PASSWORD'];
+        $mail->SMTPSecure = $_ENV['SMTP_SECURE'];
+        $mail->Port = $_ENV['SMTP_PORT'];
 
         // Recipients
-        $mail->setFrom('server@msaid.dev', 'Web Contact Form');
-        $mail->addAddress($email, $name); 
-
-        // Sending email
-        $mail->isHTML(true);
-        $mail->Subject = 'New Message from Website Contact Form';
-        $mail->Body    = "<b>Name:</b> {$name}<br><b>Email:</b> {$email}<br><b>Message:</b><br>{$message}";
+        $mail->setFrom($_ENV['FROM_EMAIL'], $_ENV['FROM_NAME']);
+        $mail->addAddress('mo-45@hotmail.com', 'Your Name');
+        
+        // Email subject
+        $subject = 'Inquiry from ' . $email . ' sent via Web Contact Form';
+        $mail->Subject = $subject;
+        
+        // Email body
+        $body = "<b>Name:</b> {$name}<br><b>Email:</b> {$email}<br><b>Message:</b><br>{$message}";
+        $mail->Body = $body;
         $mail->AltBody = "Name: {$name}\nEmail: {$email}\nMessage:\n{$message}";
-
+        
         $mail->send();
     }
 } catch (Exception $e) {
