@@ -43,8 +43,34 @@ try {
         $mail->AltBody = "Name: {$name}\nEmail: {$email}\nMessage:\n{$message}";
         
         $mail->send();
+
+        // Sending confirmation email to the user
+        // Server settings
+        $confirmationMail = new PHPMailer(true);
+        $confirmationMail->isSMTP();
+        $confirmationMail->Host = $_ENV['SMTP_HOST'];
+        $confirmationMail->SMTPAuth = true;
+        $confirmationMail->Username = $_ENV['SMTP_USERNAME'];
+        $confirmationMail->Password = $_ENV['SMTP_PASSWORD'];
+        $confirmationMail->SMTPSecure = $_ENV['SMTP_SECURE'];
+        $confirmationMail->Port = $_ENV['SMTP_PORT'];
+
+        // Recipients
+        $confirmationMail->setFrom($_ENV['FROM_EMAIL'], $_ENV['FROM_NAME']);
+        $confirmationMail->addAddress($email, $name);
+
+        // Email subject
+        $confirmationSubject = 'Message Sent Successfully';
+        $confirmationMail->Subject = $confirmationSubject;
+
+        // Email body
+        $confirmationBody = "Dear {$name},<br><br>Your message has succesfully been sent. I will get back to you as soon as possible.<br><br>Thank you for contacting me.<br><br>Best regards,<br>Mohamed Said";
+        $confirmationMail->Body = $confirmationBody;
+        $confirmationMail->AltBody = "Dear {$name},\n\nYour message has succesfully been sent. I will get back to you as soon as possible.\n\nThank you for contacting me.\n\nBest regards,\nMohamed Said";
+        $confirmationMail->send();
     }
 } catch (Exception $e) {
     echo "Error: {$mail->ErrorInfo}";
 }
+header("Location: https://msaid.dev");
 ?>

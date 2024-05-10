@@ -22,9 +22,18 @@ body {
   overflow: hidden;
 }
 
+#social-icons {
+  display: inline-block;
+  width: 100%;
+  font-size: 30px;
+  margin-right: 100px;
+
+}
+
 .nav-bar a {
   float: right;
   padding: 0px 10px;
+  margin: 10px 0px 0px 0px;
 }
 
 .header {
@@ -39,8 +48,9 @@ body {
 }
 
 .about-text {
-  text-align: center;
-  margin: 0 10% 80px;
+  /* text-align: center; */
+  margin: 0 15% 80px;
+  line-height: 1.2;
 }
 
 
@@ -130,13 +140,7 @@ body {
 
 
 /*found on Hyperplexed*/
-#social-icons {
-  display: inline-block;
-  width: 100%;
-  font-size: 30px;
-  align-items: right;
 
-}
 
 #card-container {
   align-items: center;
@@ -221,9 +225,8 @@ body {
 }
 
 .card-content p {
-  margin: 20px;
+  margin: 10px 0px;
   font-size: 1vw;
-
 }
 
 /* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
@@ -271,19 +274,24 @@ a {
 }
 
 .card-info {
-  align-items: flex-start;
   display: flex;
-  gap: 10px;
+  font-size: 12px;
+
+}
+
+.card-info-container {
+  overflow: hidden;
+  height: 100%;
 }
 
 .card-info>i {
   font-size: 1em;
-  height: 20px;
+  height: 10px;
   line-height: 20px;
 }
 
-.card-info-title>h3 {
-  font-size: 1.1em;
+.card-info-title {
+  font-size: 20px;
   line-height: 20px;
 }
 
