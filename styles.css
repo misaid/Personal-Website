@@ -395,16 +395,28 @@ textarea {
     align-items: flex-start;
     overflow: scroll;
   }
+
+  .project-container {
+    margin: 0 5% 200px;
+  }
+  .project-text{
+
+  
+  margin:0 15% 40px;}
   #cards {
     flex-wrap: nowrap;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Enable smooth scrolling on iOS devices */
+    scroll-snap-type: x mandatory;
+    /* Enable snap scrolling */
   }
 
   .card {
-    flex: 0 0 auto; /* Allow cards to shrink to fit in the carousel */
-    scroll-snap-align: start; /* Snap cards to the start of the viewport */
+    flex: 0 0 auto;
+    /* Allow cards to shrink to fit in the carousel */
+    scroll-snap-align: start;
+    /* Snap cards to the start of the viewport */
   }
 
 
@@ -468,13 +480,14 @@ textarea {
     margin: 0 0 20px 0;
   }
 
-  .project-container{
-    margin: 0 15% 100px;
+  .project-container {
+    margin: 0 0 100px;
   }
-  .project-container h2{
+
+  .project-container h2 {
     font-size: 16px;
-  
   }
+
   #get-in-touch {
     margin: 100px 15%;
   }
