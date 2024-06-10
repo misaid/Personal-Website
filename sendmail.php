@@ -31,7 +31,7 @@ try {
 
         // Recipients
         $mail->setFrom($_ENV['FROM_EMAIL'], $_ENV['FROM_NAME']);
-        $mail->addAddress('mo-45@hotmail.com', 'Your Name');
+        $mail->addAddress('MohamedSaid@msaid.dev', 'Mohamed Said');
         
         // Email subject
         $subject = 'Inquiry from ' . $email . ' sent via Web Contact Form';

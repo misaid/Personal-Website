@@ -3,5 +3,4 @@ sendmail.php
 /vendor
 composer.json
 composer.lock
-/assets
 test.php
