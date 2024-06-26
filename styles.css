@@ -6,10 +6,13 @@
   font-family: "Rubik", sans-serif;
 
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   background-color: var(--bg-color);
+  
 }
 
 .nav-bar {
@@ -59,6 +62,14 @@ body {
   font-size: 20px;
   padding: 0px;
   text-decoration: none;
+  scroll-behavior: smooth;
+}
+@keyframes fadeinslide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);}
+  100% {opacity: 1;}
+
 }
 
 #introduction-section {
@@ -67,6 +78,9 @@ body {
 
 .introduction {
   margin: 400px 15%;
+  animation: fadeinslide 2s;
+  animation-timing-function: ease-in-out;
+  
 }
 
 .header {
