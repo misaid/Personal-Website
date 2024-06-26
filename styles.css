@@ -2,9 +2,7 @@
   --bg-color: rgb(20, 20, 20);
   --card-color: rgb(23, 23, 23);
   --bar-color: hsl(230, 57%, 53%);
-  ;
   font-family: "Rubik", sans-serif;
-
 }
 html {
   scroll-behavior: smooth;
@@ -12,7 +10,6 @@ html {
 body {
   margin: 0;
   background-color: var(--bg-color);
-  
 }
 
 .nav-bar {
@@ -47,9 +44,8 @@ body {
   flex: 1;
   width: 100%;
   font-size: 30px;
-  margin-right:5%;
+  margin-right: 5%;
   justify-content: flex-end;
-
 }
 
 .nav-bar a {
@@ -67,9 +63,11 @@ body {
 @keyframes fadeinslide {
   0% {
     opacity: 0;
-    transform: translateY(50px);}
-  100% {opacity: 1;}
-
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #introduction-section {
@@ -80,7 +78,6 @@ body {
   margin: 400px 15%;
   animation: fadeinslide 2s;
   animation-timing-function: ease-in-out;
-  
 }
 
 .header {
@@ -91,7 +88,6 @@ body {
 
 .small-header {
   margin: 50px 0;
-
 }
 
 .about-text {
@@ -100,7 +96,6 @@ body {
   line-height: 1.2;
   font-size: 24px;
 }
-
 
 .skills-container {
   margin: 0 15% 400px;
@@ -179,7 +174,6 @@ body {
   height: 100%;
 }
 
-
 /*found on Hyperplexed*/
 .project-container {
   margin: 0 15% 400px;
@@ -189,8 +183,8 @@ body {
   color: white;
 }
 .project-text {
-    margin: 0 0 40px;
- }
+  margin: 0 0 40px;
+}
 #card-container {
   align-items: center;
   background-color: var(--bg-color);
@@ -211,7 +205,7 @@ body {
   width: calc(100% - 20px);
 }
 
-#cards:hover>.card::after {
+#cards:hover > .card::after {
   opacity: 1;
 }
 
@@ -244,20 +238,24 @@ body {
 }
 
 .card::before {
-  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-      rgba(255, 255, 255, 0.06),
-      transparent 40%);
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
   z-index: 3;
 }
 
 .card::after {
-  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-      rgba(255, 255, 255, 0.4),
-      transparent 40%);
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
   z-index: 1;
 }
 
-.card>.card-content {
+.card > .card-content {
   background-color: var(--card-color);
   border-radius: inherit;
   display: flex;
@@ -306,7 +304,7 @@ a {
   overflow: hidden;
 }
 
-.card-image>i {
+.card-image > i {
   font-size: 6em;
   opacity: 0.25;
 }
@@ -322,7 +320,6 @@ a {
 .card-info {
   display: flex;
   font-size: 12px;
-
 }
 
 .card-info-container {
@@ -330,7 +327,7 @@ a {
   height: 100%;
 }
 
-.card-info>i {
+.card-info > i {
   font-size: 1em;
   height: 10px;
   line-height: 20px;
@@ -371,7 +368,6 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   background-color: var(--bg-color);
-
 }
 
 input[type="email"],
@@ -379,7 +375,6 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   background-color: var(--bg-color);
-
 }
 
 #email {
@@ -406,7 +401,7 @@ textarea {
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
   body {
     align-items: flex-start;
     overflow: scroll;
@@ -415,10 +410,9 @@ textarea {
   .project-container {
     margin: 0 5% 200px;
   }
-  .project-text{
-
-  
-  margin:0 15% 40px;}
+  .project-text {
+    margin: 0 15% 40px;
+  }
   #cards {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -434,8 +428,6 @@ textarea {
     scroll-snap-align: start;
     /* Snap cards to the start of the viewport */
   }
-
-
 }
 
 @media (max-width: 500px) {
@@ -507,12 +499,9 @@ textarea {
   #get-in-touch {
     margin: 100px 15%;
   }
-
-
-
 }
 
-@media(max-width: 320px) {
+@media (max-width: 320px) {
   .card {
     width: 100%;
   }
